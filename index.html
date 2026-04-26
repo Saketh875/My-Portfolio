@@ -186,8 +186,14 @@
             border: 1px solid #bd00ff;
         }
 
+        /* --- BUTTON ROW --- */
+        .btn-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
         .btn-github {
-            align-self: flex-start;
             padding: 10px 20px;
             background: #fff;
             color: #000;
@@ -197,10 +203,33 @@
             align-items: center;
             gap: 10px;
             transition: 0.3s;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
         }
 
         .btn-github:hover {
             background: #00f3ff;
+            box-shadow: 0 0 15px #00f3ff;
+        }
+
+        .btn-demo {
+            padding: 10px 20px;
+            background: transparent;
+            color: #00f3ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.85rem;
+            border: 1px solid #00f3ff;
+        }
+
+        .btn-demo:hover {
+            background: #00f3ff;
+            color: #000;
             box-shadow: 0 0 15px #00f3ff;
         }
 
@@ -322,14 +351,66 @@
         <section id="projects">
             <h2 class="section-title">PROJECT MODULES</h2>
             <div class="projects-grid">
-                
+
+                <div class="project-card">
+                    <div>
+                        <h3>Hyderabad Monsoon Traffic Analysis</h3>
+                        <p class="project-desc">
+                            Collected and analyzed 10 years of real rainfall and traffic index data across 30+ live 
+                            city monitoring points. Built interactive dashboards, zone-wise statistical reports, 
+                            and a live traffic flow map visualizing monsoon congestion patterns across Hyderabad.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tag">Python</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Visualization</span>
+                            <span class="tag">Real-Time APIs</span>
+                        </div>
+                    </div>
+                    <div class="btn-row">
+                        <a href="https://saketh875.github.io/Rain-Traffic/" target="_blank" class="btn-demo">
+                            <i class="fas fa-external-link-alt"></i> LIVE DEMO
+                        </a>
+                        <a href="https://github.com/Saketh875" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <h3>Airport Issue Reporting System</h3>
+                        <p class="project-desc">
+                            Developed a role-based issue tracking system for airport facility management with 
+                            emergency-priority workflows. Migrated to PostgreSQL cloud database and deployed live. 
+                            Features JWT auth, RBAC, and a real-time React.js dashboard.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tag">Java Spring Boot</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Spring Security</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                    <div class="btn-row">
+                        <a href="https://saketha54.vercel.app/" target="_blank" class="btn-demo">
+                            <i class="fas fa-external-link-alt"></i> LIVE DEMO
+                        </a>
+                        <a href="https://github.com/Saketh875/Airport_Issue_Report_app" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
+                </div>
+
                 <div class="project-card">
                     <div>
                         <h3>GenEZ (AI Agent System)</h3>
                         <p class="project-desc">
                             Built a multi-agent Python application orchestrating trend research, content writing, 
                             and image generation using Google Vertex AI and Search APIs to automate social media 
-                            marketing campaigns.
+                            marketing campaigns end-to-end.
                         </p>
                         <div class="tech-stack">
                             <span class="tag">Python</span>
@@ -338,28 +419,33 @@
                             <span class="tag">Google Search API</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Saketh875/Content-Gen-Agent" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> VIEW ON GITHUB
-                    </a>
+                    <div class="btn-row">
+                        <a href="https://github.com/Saketh875/Content-Gen-Agent" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div>
-                        <h3>Airport Issue Reporting System</h3>
+                        <h3>Telugu Conversational AI for Android</h3>
                         <p class="project-desc">
-                            Developed a responsive issue tracking solution that streamlines airport maintenance operations. 
-                            Implemented a workflow for staff and a high-priority emergency reporting feature.
+                            Built an always-on Android voice assistant with a floating overlay UI for hands-free 
+                            device control. Integrated Speech-to-Text, OpenAI NLP, and TTS for end-to-end 
+                            conversational interaction with automated in-app navigation via Accessibility Services.
                         </p>
                         <div class="tech-stack">
-                            <span class="tag">Java Spring Boot</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">React.js</span>
-                            <span class="tag">Spring Security</span>
+                            <span class="tag">Kotlin</span>
+                            <span class="tag">Android SDK</span>
+                            <span class="tag">OpenAI API</span>
+                            <span class="tag">Accessibility Services</span>
                         </div>
                     </div>
-                    <a href="https://github.com/Saketh875/Airport_Issue_Report_app" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> VIEW ON GITHUB
-                    </a>
+                    <div class="btn-row">
+                        <a href="https://github.com/Saketh875" target="_blank" class="btn-github">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -395,9 +481,9 @@
             
             <div class="contact-info">
                 <p style="font-size: 2rem; font-weight: bold; margin-bottom: 20px;">Saketh Gade</p>
-                <p><i class="fas fa-envelope tech-accent"></i> sakethgade8705@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt tech-accent"></i> Hyderabad, Ind 500076</p>
-                <p><i class="fas fa-phone tech-accent"></i> 7300863341</p>
+                <p><i class="fas fa-envelope tech-accent"></i> <a href="mailto:sakethgade081@gmail.com" style="color: inherit; text-decoration: none;">sakethgade081@gmail.com</a></p>
+                
+                <p><i class="fas fa-phone tech-accent"></i> +91 7330683311</p>
             </div>
 
             <a href="https://linkedin.com/in/saketh-gade-664078290" target="_blank" class="btn-linkedin">
@@ -497,12 +583,9 @@
         }
         animate();
 
-        // --- TYPEWRITER EFFECT (UPDATED) ---
+        // --- TYPEWRITER EFFECT ---
         const textElement = document.getElementById('typing-text');
-        
-        // --- CHANGED TEXT HERE ---
         const textToType = "Tech Enthusiast"; 
-        
         textElement.innerText = '';
         let charIndex = 0;
 
